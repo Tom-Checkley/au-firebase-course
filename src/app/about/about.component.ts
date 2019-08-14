@@ -44,4 +44,26 @@ export class AboutComponent implements OnInit {
     batch$.subscribe();
   }
 
+  // Transasctions
+  async runTransaction() {
+
+    const newCounter = await this.db.firestore.runTransaction(async transaction => {
+      console.log('running transaction...');
+
+      const courseRef = this.db.doc('/courses/fndv9uFliETIMynK51jr').ref;
+
+      const snap = await transaction.get(courseRef);
+
+      const course = <Course>snap.data();
+
+      const lessonsCount = course.lessonsCount + 1;
+
+      transaction.update(courseRef, {lessonsCount});
+
+      return lessonsCount;
+    });
+
+    console.log(newCounter);
+  }
+
 }
