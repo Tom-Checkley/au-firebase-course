@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
     this.pictureUrl$ = this.afAuth.authState.pipe(map(user => user ? user.photoURL : null));
   }
 
-
   logout() {
     this.afAuth.auth.signOut();
   }
