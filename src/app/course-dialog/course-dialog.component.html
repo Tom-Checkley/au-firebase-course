@@ -29,10 +29,6 @@
             <span>{{percentage / 100 | percent}}</span>
           </div>
 
-          <ng-container *ngIf="(downloadUrl$ | async) as downloadUrl">
-              <img class="uploaded-image" [src]="downloadUrl" alt="">
-          </ng-container>
-
         </div>
 
     </mat-form-field>
