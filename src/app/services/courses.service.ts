@@ -3,10 +3,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import OrderByDirection = firebase.firestore.OrderByDirection;
 import { map, first } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-
-import { convertSnaps } from './db-utils';
 import { Course } from '../model/course';
+import { Observable, from } from 'rxjs';
+import { convertSnaps } from './db-utils';
 import { Lesson } from '../model/lesson';
 
 @Injectable({
@@ -62,5 +61,9 @@ export class CoursesService {
       map(snaps => convertSnaps<Lesson[]>(snaps)),
       first()
     );
+  }
+
+  saveCourse(courseId: string, changes: Partial<Course>): Observable<any> {
+    return from (this.db.doc(`courses/${courseId}`).update(changes));
   }
 }

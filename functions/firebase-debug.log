@@ -1,0 +1,43 @@
+[debug] [2019-09-03T16:23:07.904Z] ----------------------------------------------------------------------
+[debug] [2019-09-03T16:23:07.906Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tomc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2019-09-03T16:23:07.906Z] CLI Version:   7.3.0
+[debug] [2019-09-03T16:23:07.906Z] Platform:      win32
+[debug] [2019-09-03T16:23:07.906Z] Node Version:  v10.16.0
+[debug] [2019-09-03T16:23:07.907Z] Time:          Tue Sep 03 2019 17:23:07 GMT+0100 (British Summer Time)
+[debug] [2019-09-03T16:23:07.907Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-03T16:23:07.915Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-03T16:23:07.916Z] > authorizing via signed-in user
+[debug] [2019-09-03T16:23:07.916Z] [iam] checking project fir-course-7a3fd for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-09-03T16:23:07.917Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-course-7a3fd:testIamPermissions  
+
+[debug] [2019-09-03T16:23:30.356Z] ----------------------------------------------------------------------
+[debug] [2019-09-03T16:23:30.358Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tomc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-09-03T16:23:30.358Z] CLI Version:   7.3.0
+[debug] [2019-09-03T16:23:30.358Z] Platform:      win32
+[debug] [2019-09-03T16:23:30.358Z] Node Version:  v10.16.0
+[debug] [2019-09-03T16:23:30.359Z] Time:          Tue Sep 03 2019 17:23:30 GMT+0100 (British Summer Time)
+[debug] [2019-09-03T16:23:30.359Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-03T16:23:30.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-03T16:23:30.368Z] > authorizing via signed-in user
+[debug] [2019-09-03T16:23:30.368Z] [iam] checking project fir-course-7a3fd for permissions ["firebase.projects.get"]
+[debug] [2019-09-03T16:23:30.369Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-course-7a3fd:testIamPermissions  
+
+[debug] [2019-09-03T16:23:31.077Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-03T16:23:31.079Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-course-7a3fd  
+ 
+[debug] [2019-09-03T16:23:31.274Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "D:\Projects\au-firebase-course\functions" for Cloud Functions...
+[debug] [2019-09-03T16:23:31.988Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\Projects\\au-firebase-course\\functions","node_version":"10.16.0"}
+[debug] [2019-09-03T16:23:31.988Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-03T16:23:31.990Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"D:\\Projects\\au-firebase-course\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-03T16:23:31.992Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"D:\\Projects\\au-firebase-course\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-03T16:23:31.993Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"D:\\Projects\\au-firebase-course\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-03T16:23:32.515Z] Unsupported trigger: {"eventTrigger":{"resource":"projects/_/buckets/fir-course-7a3fd.appspot.com","eventType":"google.storage.object.finalize","service":"storage.googleapis.com"},"name":"resizeThumbnail","entryPoint":"resizeThumbnail"}
+[info] +  functions[getCourses]: http function initialized (http://localhost:5000/fir-course-7a3fd/us-central1/getCourses).
+[info] i  functions[onAddLesson]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[onDeleteLesson]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[resizeThumbnail]: function ignored because the storage.googleapis.com emulator does not exist or is not running.
