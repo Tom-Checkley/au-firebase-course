@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+
 import OrderByDirection = firebase.firestore.OrderByDirection;
 import { map, first } from 'rxjs/operators';
-import { Course } from '../model/course';
 import { Observable } from 'rxjs';
+
 import { convertSnaps } from './db-utils';
+import { Course } from '../model/course';
 import { Lesson } from '../model/lesson';
 
 @Injectable({
